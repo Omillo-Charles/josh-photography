@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="text-center lg:text-left order-2 lg:order-1">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-secondary text-sm font-medium mb-8 animate-fade-in-up">
             <Star size={14} className="fill-secondary" />
-            <span>Award Winning Photography Studio</span>
+            <span>The Power Behind the Camera</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
@@ -55,8 +55,8 @@ const Hero = () => {
               <p className="text-sm text-neutral-400">Happy Clients</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">50+</p>
-              <p className="text-sm text-neutral-400">Awards Won</p>
+              <p className="text-3xl font-bold text-white">10+</p>
+              <p className="text-sm text-neutral-400">Years Experience</p>
             </div>
             <div>
               <p className="text-3xl font-bold text-white">100%</p>
@@ -72,8 +72,8 @@ const Hero = () => {
           {/* Main Image */}
           <div className="absolute top-10 right-10 w-2/3 h-3/4 rounded-[2rem] overflow-hidden shadow-2xl rotate-3 border-4 border-white/5 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1976&auto=format&fit=crop"
-              alt="Wedding couple"
+              src="/hero/hero3.png"
+              alt="Professional photography"
               fill
               className="object-cover"
             />
@@ -82,8 +82,8 @@ const Hero = () => {
           {/* Floating Image 1 */}
           <div className="absolute bottom-20 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl -rotate-6 border-4 border-white/5 z-10">
             <Image
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop"
-              alt="Portrait"
+              src="/hero/hero4.png"
+              alt="Photography portfolio"
               fill
               className="object-cover"
             />
@@ -91,8 +91,8 @@ const Hero = () => {
 
           {/* Floating Badge */}
           <div className="absolute top-20 left-10 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl z-20 animate-bounce-slow">
-            <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Featured In</p>
-            <p className="text-white font-serif text-xl">VOGUE</p>
+            <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Bush</p>
+            <p className="text-white font-serif text-xl">PHOTOGRAPHY</p>
           </div>
         </div>
       </div>
