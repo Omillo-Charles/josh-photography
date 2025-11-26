@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Camera, Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Camera, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
+
+// Custom X (Twitter) Icon Component
+const XIcon = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -75,11 +82,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-secondary">Follow Us</h3>
             <div className="flex gap-4 mb-8">
-              {[Instagram, Facebook, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="bg-white/5 p-3 rounded-xl hover:bg-secondary hover:text-primary transition-all duration-300 hover:-translate-y-1">
-                  <Icon size={20} />
-                </a>
-              ))}
+              <a href="#" className="bg-white/5 p-3 rounded-xl hover:bg-secondary hover:text-primary transition-all duration-300 hover:-translate-y-1">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="bg-white/5 p-3 rounded-xl hover:bg-secondary hover:text-primary transition-all duration-300 hover:-translate-y-1">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="bg-white/5 p-3 rounded-xl hover:bg-secondary hover:text-primary transition-all duration-300 hover:-translate-y-1">
+                <XIcon size={20} />
+              </a>
             </div>
             <p className="text-neutral-400 text-xs">
               Subscribe to our newsletter for updates and photography tips.
