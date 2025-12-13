@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
             Capturing <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
-              Raw Emotion
+              Emotions
             </span>
           </h1>
 
