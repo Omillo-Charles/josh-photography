@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  title: "Bush Photography",
+  title: "Josh Photography",
   description: "Professional photography services",
 };
 

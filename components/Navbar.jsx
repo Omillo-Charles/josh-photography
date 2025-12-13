@@ -36,8 +36,8 @@ const Navbar = () => {
     >
       <div
         className={`w-[95%] max-w-7xl transition-all duration-500 rounded-full px-6 py-3 flex justify-between items-center ${scrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-lg border border-white/20"
-            : "bg-transparent"
+          ? "bg-white/80 backdrop-blur-xl shadow-lg border border-white/20"
+          : "bg-transparent"
           }`}
       >
         {/* Logo */}
@@ -46,7 +46,7 @@ const Navbar = () => {
             <Camera size={20} />
           </div>
           <span className={`text-lg font-bold tracking-tight ${scrolled ? "text-primary" : "text-white"}`}>
-            BUSH
+            JOSH
           </span>
         </Link>
 
@@ -69,8 +69,8 @@ const Navbar = () => {
           <Link
             href="/book"
             className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all transform hover:scale-105 shadow-md ${scrolled
-                ? "bg-primary text-white hover:bg-primary/90"
-                : "bg-white text-primary hover:bg-neutral-100"
+              ? "bg-primary text-white hover:bg-primary/90"
+              : "bg-white text-primary hover:bg-neutral-100"
               }`}
           >
             Book Now

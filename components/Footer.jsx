@@ -6,7 +6,7 @@ import { Camera, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 // Custom X (Twitter) Icon Component
 const XIcon = ({ size = 20 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
 
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Camera size={24} />
               </div>
               <span className="text-2xl font-bold tracking-tight">
-                BUSH
+                JOSH
               </span>
             </Link>
             <p className="text-neutral-300 text-sm leading-relaxed max-w-xs">
@@ -61,19 +61,19 @@ const Footer = () => {
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-secondary/20 transition-colors">
                   <MapPin size={18} className="text-secondary" />
                 </div>
-                <span className="mt-1">Kwarara Road, Off Ndege Rd,<br />Nairobi 0075</span>
+                <span className="mt-1">Ongata Rongai</span>
               </li>
               <li className="flex items-center gap-3 text-neutral-300 text-sm group">
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-secondary/20 transition-colors">
                   <Phone size={18} className="text-secondary" />
                 </div>
-                <span>+254 757 551831</span>
+                <span>+254797322205</span>
               </li>
               <li className="flex items-center gap-3 text-neutral-300 text-sm group">
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-secondary/20 transition-colors">
                   <Mail size={18} className="text-secondary" />
                 </div>
-                <span>bushphotography0@gmail.com</span>
+                <span>namwangajoshua@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-neutral-500 text-sm">
-            © {new Date().getFullYear()} Bush Photography. All rights reserved.
+            © {new Date().getFullYear()} Josh Photography. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-neutral-500">
             <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>

@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="text-center lg:text-left order-2 lg:order-1">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-secondary text-sm font-medium mb-8 animate-fade-in-up">
             <Star size={14} className="fill-secondary" />
-            <span>The Power Behind the Camera</span>
+            <span>Moments That Matter Most</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
@@ -51,11 +51,11 @@ const Hero = () => {
 
           <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 border-t border-white/10 pt-8">
             <div>
-              <p className="text-3xl font-bold text-white">500+</p>
+              <p className="text-3xl font-bold text-white">50+</p>
               <p className="text-sm text-neutral-400">Happy Clients</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">10+</p>
+              <p className="text-3xl font-bold text-white">4+</p>
               <p className="text-sm text-neutral-400">Years Experience</p>
             </div>
             <div>
@@ -91,7 +91,7 @@ const Hero = () => {
 
           {/* Floating Badge */}
           <div className="absolute top-20 left-10 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl z-20 animate-bounce-slow">
-            <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Bush</p>
+            <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Josh</p>
             <p className="text-white font-serif text-xl">PHOTOGRAPHY</p>
           </div>
         </div>
