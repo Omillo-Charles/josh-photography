@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Webly Sleek UI';
-  src: url('/fonts/weblysleekuisb.ttf') format('truetype');
+  font-family: "Webly Sleek UI";
+  src: url("/fonts/weblysleekuisb.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -10,19 +10,19 @@
 
 :root {
   /* Clean Professional Palette */
-  --primary: #1E1E1E;
+  --primary: #1e1e1e;
   /* Black */
-  --secondary: #3366FF;
+  --secondary: #3366ff;
   /* Royal Blue Accent */
-  --accent: #3366FF;
+  --accent: #3366ff;
   /* Royal Blue Accent */
-  --background: #FFFFFF;
+  --background: #ffffff;
   /* White */
-  --background-alt: #F0F3F8;
+  --background-alt: #f0f3f8;
   /* Cool Light Gray */
-  --foreground: #1E1E1E;
+  --foreground: #1e1e1e;
   /* Black Text */
-  --muted: #7A7A7A;
+  --muted: #7a7a7a;
   /* Neutral Gray */
 }
 
@@ -34,7 +34,7 @@
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
-  --font-sans: 'Webly Sleek UI', var(--font-geist-sans), system-ui, sans-serif;
+  --font-sans: "Webly Sleek UI", var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
@@ -48,7 +48,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Webly Sleek UI', var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: "Webly Sleek UI", var(--font-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -56,18 +56,4 @@ body {
 ::selection {
   background-color: var(--secondary);
   color: var(--primary);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  animation: scroll 20s linear infinite;
 }

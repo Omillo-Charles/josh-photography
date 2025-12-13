@@ -46,7 +46,7 @@ const Navbar = () => {
             <Camera size={20} />
           </div>
           <span className={`text-lg font-bold tracking-tight ${scrolled ? "text-primary" : "text-white"}`}>
-            JOSH
+            JOSHH
           </span>
         </Link>
 

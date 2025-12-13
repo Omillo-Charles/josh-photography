@@ -26,7 +26,7 @@ const Footer = () => {
                 <Camera size={24} />
               </div>
               <span className="text-2xl font-bold tracking-tight">
-                JOSH
+                JOSHH
               </span>
             </Link>
             <p className="text-neutral-300 text-sm leading-relaxed max-w-xs">
@@ -101,7 +101,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-neutral-500 text-sm">
-            © {new Date().getFullYear()} Josh Photography. All rights reserved.
+            © {new Date().getFullYear()} Joshh Photography. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-neutral-500">
             <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>

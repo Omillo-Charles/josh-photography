@@ -1,33 +1,63 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    image: "/featured/featured1.jpeg",
+    image: "/faetured/josh1.jpg",
   },
   {
     id: 2,
-    image: "/featured/featured2.jpeg",
+    image: "/faetured/josh2.jpg",
   },
   {
     id: 3,
-    image: "/featured/featured3.jpeg",
+    image: "/faetured/jsoh3.jpg",
   },
   {
     id: 4,
-    image: "/featured/featured4.jpeg",
+    image: "/faetured/jsoh4.jpg",
   },
   {
     id: 5,
-    image: "/featured/featured5.jpeg",
+    image: "/faetured/josh5.jpg",
+  },
+  {
+    id: 6,
+    image: "/faetured/jsoh6.jpg",
   },
 ];
 
 const FeaturedWork = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? projects.length - 1 : currentIndex - 1);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === projects.length - 1 ? 0 : currentIndex + 1);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,42 +103,59 @@ const FeaturedWork = () => {
           ))}
         </div>
 
-        {/* Mobile: Carousel */}
-        <div className="md:hidden relative overflow-hidden">
-          <div className="flex gap-4 animate-scroll">
-            {/* First set of images */}
-            {projects.map((project) => (
-              <div
-                key={`carousel-1-${project.id}`}
-                className="flex-shrink-0 w-[80vw] h-[60vh] group cursor-pointer"
-              >
-                <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg">
-                  <Image
-                    src={project.image}
-                    alt={`Gallery image ${project.id}`}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="80vw"
-                  />
+        {/* Mobile: New Carousel */}
+        <div className="md:hidden relative">
+          {/* Carousel Container */}
+          <div className="relative overflow-hidden rounded-2xl">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="w-full flex-shrink-0"
+                >
+                  <div className="relative w-full h-[60vh]">
+                    <Image
+                      src={project.image}
+                      alt={`Gallery image ${project.id}`}
+                      fill
+                      className="object-cover"
+                      sizes="100vw"
+                      priority={project.id <= 2}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
-            {/* Duplicate set for infinite scroll */}
-            {projects.map((project) => (
-              <div
-                key={`carousel-2-${project.id}`}
-                className="flex-shrink-0 w-[80vw] h-[60vh] group cursor-pointer"
-              >
-                <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg">
-                  <Image
-                    src={project.image}
-                    alt={`Gallery image ${project.id}`}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="80vw"
-                  />
-                </div>
-              </div>
+              ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-all"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-6 gap-2">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
+                  ? 'bg-secondary scale-110'
+                  : 'bg-neutral-300 hover:bg-neutral-400'
+                  }`}
+              />
             ))}
           </div>
         </div>
