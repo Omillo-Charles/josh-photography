@@ -59,23 +59,23 @@ const FeaturedWork = () => {
   };
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-primary overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <h2 className="text-secondary font-medium tracking-wider uppercase mb-3">Portfolio</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4">
+            <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
               Selected Works
             </h3>
-            <p className="text-lg text-neutral-500 max-w-xl">
+            <p className="text-lg text-neutral-300 max-w-xl">
               A collection of our favorite moments captured through the lens.
               Each image tells a unique story of love, life, and beauty.
             </p>
           </div>
           <Link
             href="/portfolio"
-            className="group flex items-center gap-2 text-lg font-bold text-primary hover:text-secondary transition-colors"
+            className="group flex items-center gap-2 text-lg font-bold text-white hover:text-secondary transition-colors"
           >
             View All Projects
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
